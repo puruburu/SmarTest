@@ -1,0 +1,45 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+<link rel = "stylesheet" href = "greTutorial.css" type = "text/css">
+<title>JEE MAINS PRACTICE TESTS</title>
+</head>
+
+<body onLoad="resetForm(this);" >
+	<div align='center' id = "header1" style='position:fixed;'>
+		<font  color='white'><u><i><b>SmarTest</b></i></u></font>
+		<marquee direction='left'><h2><font size='5' color='white'><i>Success is the sum of small efforts, repeated day in and day out.It's the way to an IIT...</I></font></h2></marquee><hr color='white' size='3px'><br>
+	</div><br><br><br><br><br><br><br><br>
+	<div align='center' class='white'>
+		<p align='center'><font color='white' ><h1>Login Form:</h1></font></p>
+		
+		<p id = "login"></p>
+		
+		<div id="section1">
+		<form id="f1" onsubmit="return passwordMatch();" method = "post">
+		<fieldset  color='black' padding='15px'>
+			<legend align='center'>LOGIN</legend><br>
+			User name:<br><input type="text" style="color:black;" name="loginUsername" id="loginUsername"><br>
+			Password:<br><input type="password" style="color:black;" name="loginPassword" id="loginPassword"><br><br>
+			<input type="submit" class='black' value="Submit">
+		</fieldset>
+		</form> 
+			</div>	
+		
+		
+	<div id='section1'>
+		<p id = "validity"></p>
+		<form id='f2' onsubmit="return check()" method="post">
+		<fieldset>
+			<legend align='center'>SIGN UP!</legend><br>
+			User name:<br><input type="text" style="color:black;" name="username" id="username" ><br>
+			Password:<br><input type="password" style="color:black;" name="password" id="password" value=""><br>
+			Re-enter Password:<br><input style="color:black;" type="password" name="repassword" id="repassword"><br><br>
+			<input type="submit" value="Submit" class='black'>
+		</fieldset>
+		</form>
+	</div>
+		<script src = "test.js"></script>
+		
+	</body>
+	</html>		

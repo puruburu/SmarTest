@@ -1,0 +1,119 @@
+<html>
+<head>
+
+<title>Display Result</title>
+<link rel = "stylesheet" href = "page1.css" type = "text/css">
+<script type="text/javascript" src="jscharts.js"></script>
+<script type = "text/javascript" src ="test.js"></script>
+</head>
+<body onload="computeResult();">
+<div id="header2" style='position:fixed;' ><br><br><br><br>
+<h2>RESULT!!!</h2>
+	<p id = "totalScore"></p>
+	<p id = "p"></p>
+	<p id = "c"></p>
+	<p id = "m"></p>
+<a href="dispGraph.html"><input type=button value="View Graphical Analysis" ></a><br><br>
+<a href="highest.html"><input type=button value="View top Scores" ></a></div>
+<!--<div id="graph">Loading graph...</div>
+<div id = "graph2"> loading graph2</div>
+<div id = "graph3"></div>
+<script type="text/javascript">
+	var tid = localStorage.getItem("tid");
+	console.log(tid,"dysavhc");
+	var m = parseInt(localStorage.getItem("mmarks"));
+	console.log("yjhc ",m,"ycvs");	
+var p = parseInt(localStorage.getItem("pmarks"));
+	console.log("yjhc ",p,"ycvs");
+	var c = 0;//getc();
+	var myData = new Array(['Physics', p], ['Chemistry', c], ['Maths', m]);
+	var myChart = new JSChart('graph', 'bar');
+	var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('marks you got in every section of the test:');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisNameY('marks');
+	//myChart.setAxisReversed(true)
+
+	myChart.draw();
+	
+</script>
+<!--<script type="text/javascript">
+	var m = getm();
+	var p = getp();
+	var c = getc();
+	var m1 = getam();
+	var p1 = getap();
+	var c1 = getac();
+	var cm = mcor();
+	var cc = ccor();
+	var cp = pcor();
+	var mper = (cm/m1)*100;
+	var pper = (cp/p1)*100;
+	var cper = (cc/c1)*100;
+	var myData = new Array(['Physics', pper], ['Chemistry', cper], ['Maths', mper]);
+	var myChart = new JSChart('graph2', 'bar');
+	var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	var yaxisval = "0,10,20,30,40,50,60,70,80,90,100";
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('percentage of attempted questions you got right:');
+	myChart.setAxisNameY('%');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisReversed(true);
+	myChart.draw();
+	
+</script>
+<script type="text/javascript">
+	
+	var cm = mcor();
+	var cc = ccor();
+	var cp = pcor();
+var pw = ((30-cp)/90)*100;
+var mw = ((30-cm)/90)*100;
+var cw = ((30-cc)/90)*100;
+
+var p = (cp/90)*100;
+var m =(cm/90)*100;
+var c = (cc/90)*100;
+	var myData = new Array(['Physics Correct', p], ['Chemistry Correct', c], ['Maths Correct', m], ['Physics Wrong', pw],['Chemistry Wrong',cw],['maths Wrong',mw]);
+	var myChart = new JSChart('graph3', 'pie');
+	//var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	myChart.setDataArray(myData);
+	myChart.setTitle('');
+	var colors = ['#FA5E1F', '#FDCB3F', '#71D743', '#D23333', '#BAE73F', '#AB7B55'];
+	myChart.colorizePie(colors);
+	/*myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('marks you got in every section of the test:');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisNameY('marks');*/
+	//myChart.setAxisReversed(true)
+
+	myChart.draw();
+	
+</script>-->
+
+</body>
+</html>

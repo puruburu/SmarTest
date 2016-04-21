@@ -1,0 +1,131 @@
+<html>
+<head>
+
+<title>Display Result</title>
+
+<script type="text/javascript" src="jscharts.js"></script>
+<script type = "text/javascript" src ="test.js"></script>
+</head>
+<body >
+<div style="width:40%;float:left;margin:10px" id="graph">Loading graph...</div>
+<div style="width:40%;align:right;margin:10px;" id = "graph2"> loading graph2</div>
+<div id = "graph3"></div>
+<script type="text/javascript">
+	var tid = localStorage.getItem("tid");
+	console.log(tid,"dysavhc");
+	var m = parseInt(localStorage.getItem("mmarks"));
+	console.log("yjhc ",m,"ycvs");	
+var p = parseInt(localStorage.getItem("pmarks"));
+	console.log("yjhc ",p,"ycvs");
+	var c = parseInt(localStorage.getItem("cmarks"));
+	console.log("yjhc ",c,"ycvs");
+	var myData = new Array(['Physics', p], ['Chemistry', c], ['Maths', m]);
+	var myChart = new JSChart('graph', 'bar');
+	var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('marks you got in every section of the test:');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisNameY('marks');
+	//myChart.setAxisReversed(true)
+
+	myChart.draw();
+	
+</script>
+<script type="text/javascript">
+	var m =parseInt(localStorage.getItem("mmarks"));
+	console.log("this is shit",m,"yo");
+	var p =parseInt(localStorage.getItem("pmarks"));
+	console.log("this is shit",p,"yo");
+	var c = parseInt(localStorage.getItem("cmarks"));
+	console.log("this is shit",c,"yo");
+	var m1 = parseInt(localStorage.getItem("mans"));
+	console.log("this is shit",m1,"yo");
+	var p1 = parseInt(localStorage.getItem("pans"));
+	console.log("this is shit",p1,"yo");
+	var c1 = parseInt(localStorage.getItem("cans"));
+	console.log("this is shit",c1,"yo");
+	var cm = parseInt(localStorage.getItem("mcorr"));
+	console.log("this is shit",cm,"yo");
+	var cc = parseInt(localStorage.getItem("ccorr"));
+	console.log("this is shit",cc,"yo");
+	var cp = parseInt(localStorage.getItem("pcorr"));
+	console.log("this is shit",cp,"yo");
+	if (m1 != 0){
+		var mper = (cm/m1)*100;
+	}
+	else {
+		var mper = 0;
+	}
+	if (p1 !=0){
+		var pper = (cp/p1)*100;
+	}
+	else{
+		var pper = 0;
+	}
+	if (c1 != 0){
+		var cper = (cc/c1)*100;
+	}
+	else{
+		var cper = 0;
+	}
+	var myData = new Array(['Physics', pper], ['Chemistry', cper], ['Maths', mper]);
+	var myChart = new JSChart('graph2', 'bar');
+	var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	//var yaxisval = "0,10,20,30,40,50,60,70,80,90,100";
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('percentage of attempted questions you got right:');
+	myChart.setAxisNameY('%');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisReversed(true);
+	myChart.draw();
+	
+</script><script type="text/javascript">
+	
+var pw = ((30-cp)/90)*100;
+var mw = ((30-cm)/90)*100;
+var cw = ((30-cc)/90)*100;
+
+var p = (cp/90)*100;
+var m =(cm/90)*100;
+var c = (cc/90)*100;
+	var myData = new Array(['Physics Correct', p], ['Chemistry Correct', c], ['Maths Correct', m], ['Physics Wrong', pw],['Chemistry Wrong',cw],['maths Wrong',mw]);
+	var myChart = new JSChart('graph3', 'pie');
+	//var colors = ['#AF0202', '#EC7A00', '#FCD200'];
+	myChart.setDataArray(myData);
+	myChart.setTitle('');
+	var colors = ['#FA5E1F', '#FDCB3F', '#71D743', '#D23333', '#BAE73F', '#AB7B55'];
+	myChart.colorizePie(colors);
+	/*myChart.colorizeBars(colors);
+	myChart.setBarColor('#42aBdB');
+	myChart.setBarOpacity(1);
+	myChart.setBarBorderColor('#D9EDF7');
+	myChart.setBarValues(true);
+	myChart.setTitleColor('#AF0202');
+	myChart.setAxisColor('#AF0202');
+	myChart.setAxisValuesColor('#AF0202');
+	myChart.setTitle('marks you got in every section of the test:');
+	myChart.setAxisNameX(' ');
+	myChart.setAxisNameY('marks');*/
+	//myChart.setAxisReversed(true)
+
+	myChart.draw();
+	
+</script>
+</body>
+</html>
